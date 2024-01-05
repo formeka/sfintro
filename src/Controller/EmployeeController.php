@@ -11,7 +11,7 @@ class EmployeeController extends AbstractController
     #[Route('/employee', name: 'app_employee')]
     public function index(): Response
     {
-        $employees = [
+        $employeesArray = [
             [
                 'Name' => 'Jane Doe',
                 'Age' => 34,
@@ -30,7 +30,7 @@ class EmployeeController extends AbstractController
         ];
         
         return $this->render('employee/index.html.twig', [
-            'employees' => $employees,
+            'employees' => $employeesArray,
             'title' => 'Liste des employés'
         ]);
     }
