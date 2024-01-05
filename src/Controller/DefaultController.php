@@ -19,4 +19,10 @@ class DefaultController
         return new Response($number);
     }
 
+    #[Route('/name/{slug}','name')]
+    public function name(string $slug): Response
+    {
+        return new Response('Mon nom est : '. $slug);
+    }   
+
 }
